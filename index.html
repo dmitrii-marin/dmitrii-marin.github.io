@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Official web page of Dmitrii Marin">
+    <meta name="author" content="Dmitrii Marin">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>Dmitrii Marin, PhD candidate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Dmitrii Marin</h1>
+        <p class="mute">Дмитрий Марьин</p>
+        </p>
+      </div>
+    </div>
+    
+    <div class="container">
+        <h2>About</h2>
+        <p>I am a PhD candidate at the Department of Computer Science, University of Western Ontario. dmarin3 at uwo dot ca. My supervisor is <a href="http://www.csd.uwo.ca/~yuri/"> Yuri Boykov</a>.</p>
+        <p>My research is focused on designing general unsupervised and semi-supervised methods for accurate image segmentation and object delineation. In particular, I am focused on segmentation/detection of thin objects of different nature, e.g. roads, blood vessels, or contrast edges. The problem is formulated as cost function minimization. The concrete choice of the function depends on the properties of objects of interest. Many useful formulations are NP-hard, therefore efficient approximate optimization algorithms for such functions are desired.</p>
+
+        <h2>CV</h2>  
+        <p><a href="cv.pdf">Curriculum Vitae</a></p>  
+
+        <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+
+        <h2>Publications</h2>
+
+        <h3>Normalized Cut meets MRF</h3>
+        <p class="pub-authors">M. Tang, D. Marin, I.B. Ayed, Y. Boykov</p>
+        <p> <span class="pub-at">European Conference on Computer Vision (ECCV).</span> <span class="pub-where">Amsterdam, Netherlands, October 2016.</span>
+		Acceptance rate 1.8% (oral presentation)</p>
+        <table><tr>
+            <td><a href="eccv16ncmrf/Bound_optim_linear.png"><img src="eccv16ncmrf/Bound_optim_linear.png" alt="Linear auxiliary function <=> concave objective" class="pub-cover"></a></td>
+            <td><p class="pub-abstract"> <i>Abstract.</i> We propose a new segmentation or clustering model that combines Markov Random Field (MRF) and Normalized Cut (NC) objectives. Both NC and MRF models are widely used in machine learning and computer vision, but they were not combined before due to significant differences in the corresponding optimization, e.g. spectral relaxation and combinatorial max-flow techniques. On the one hand, we show that many common applications for multi-label MRF segmentation energies can benefit from a high-order NC term, e.g. enforcing balanced clustering of arbitrary high-dimensional image features combining color, texture, location, depth, motion, etc. On the other hand, standard NC applications benefit from an inclusion of common pairwise or higher-order MRF constraints, e.g. edge alignment, bin-consistency, label cost, etc. To address NC+MRF energy, we propose two efficient multi-label combinatorial optimization techniques, spectral cut and kernel cut, using new unary bounds for different NC formulations. </p></td>
+        </tr></table>
+        <p><a href="http://goo.gl/18Hw34">Conference paper</a></p>
+
+        <h3>Thin Structure Estimation with Curvature Regularization</h3>
+        <p class="pub-authors">D. Marin, Y. Zhong, M. Drangova, Y. Boykov</p>
+        <p> <span class="pub-at">International Conference on Computer Vision (ICCV).</span> <span class="pub-where">Santiago, Chili, December 2015.</span> Acceptance rate 19.6%</p>
+        <table><tr>
+            <td><a href="iccv15thin/cover.png"><img src="iccv15thin/cover2.png" alt="Blood vessels" class="pub-cover"></a></td>
+            <td><p class="pub-abstract"> <i>Abstract.</i> Many applications in vision require estimation of thin structures such as boundary edges, surfaces, roads, blood vessels, neurons, etc. Unlike most previous approaches, we simultaneously detect and delineate thin structures with sub-pixel localization and real-valued orientation estimation. This is an ill-posed problem that requires regularization. We propose an objective function combining detection likelihoods with a prior minimizing curvature of the center-lines or surfaces. Unlike simple block-coordinate descent, we develop a novel algorithm that is able to perform joint optimization of location and detection variables more effectively. Our lower bound optimization algorithm applies to quadratic or absolute curvature. The proposed early vision framework is sufficiently general and it can be used in many higher-level applications. We illustrate the advantage of our approach on a range of 2D and 3D examples. </p></td>
+        </tr></table>
+        <p><a href="http://goo.gl/wbiyvw">Conference paper</a></p>
+
+        <h3>Secrets of GrabCut and Kernel K-means</h3>
+        <p class="pub-authors">M. Tang, I. B. Ayed, D. Marin, Y. Boykov</p>
+        <p> <span class="pub-at">International Conference on Computer Vision (ICCV).</span> <span class="pub-where">Santiago, Chili, December 2015. </span>Acceptance rate 19.6%</p>
+        <table><tr>
+            <td>
+              <div style="position: relative">
+                <img src="iccv15kernel/ours.jpg" alt="Our result" class="pub-cover">
+                <div class="topleft" style="top:2ex;color:darkgreen;font-size:small;font-weight:bold;">OURS</div>
+              </div>
+              <div style="position: relative">
+                <img src="iccv15kernel/hist_16.jpg" alt="GrabCut result" class="pub-cover">
+                <div class="topleft" style="color:darkgreen;font-size:small;font-weight:bold;background:white">GrabCut</div>
+              </div>
+            </td>
+            <td><p class="pub-abstract"> <i>Abstract.</i> The log-likelihood energy term in popular model-fitting segmentation methods, e.g. Zhu&Yuille, Chan-Vese, GrabCut, is presented as a generalized "probabilistic K-means" energy for color space clustering. This interpretation reveals some limitations, e.g. over-fitting. We propose an alternative approach to color clustering using kernel K-means energy with well-known properties such as non-linear separation and scalability to higher-dimensional feature spaces. Our bound formulation for kernel K-means allows to combine general pair-wise feature clustering methods with image grid regularization using graph cuts, similarly to standard color model fitting techniques for segmentation. Unlike histogram or GMM fitting, our approach is closely related to average association and normalized cut. But, in contrast to previous pairwise clustering algorithms, our approach can incorporate any standard geometric regularization in the image domain. We analyze extreme cases for kernel bandwidth (e.g. Gini bias) and demonstrate effectiveness of KNN-based adaptive bandwidth strategies. Our kernel K-means approach to segmentation benefits from higher-dimensional features where standard model fitting fails. </p></td>
+        </tr></table>
+        <p><a href="http://goo.gl/KiOJe9">Conference paper</a></p>
+        <p><a href="http://arxiv.org/abs/1506.07439">Technical report (extended version)</a></p>
+        <p></p>
+
+    
+
+      <footer>
+        <p>&copy; 2016 Dmitrii Marin, UWO</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -48,6 +48,32 @@
 
         <h2>Publications</h2>
 
+        <h3>Kernel clustering: density biases and solutions.</h3>
+        <p class="pub-authors">D. Marin, M. Tang, I.B. Ayed, Y. Boykov</p>
+        <p> <span class="pub-at">IEEE Transactions on Pattern Analysis and Machine Intelligence.</span> <span class="pub-where">(accepted)</span>
+		</p>
+        <table><tr>
+            <td><a href="eccv16ncmrf/Bound_optim_linear.png"><img src="tpami17density/density.jpg" alt="Linear auxiliary function <=> concave objective" class="pub-cover"></a></td>
+            <td><p class="pub-abstract"> <i>Abstract.</i> Clustering is widely used in data analysis where
+kernel methods are particularly popular due to their generality and discriminating power.
+However, kernel clustering has a practically significant bias to small dense clusters, <i>e.g.</i> empirically observed in (Shi&Malik,2000).  
+Its causes have never been analyzed and understood theoretically, 
+even though many attempts were made to improve the results. 
+We provide conditions and formally prove this bias in kernel clustering. 
+Previously, Breiman (1996) proved a bias to histogram mode isolation in <i>discrete</i> Gini criterion for decision tree learning.
+We found that kernel clustering reduces to a <i>continuous</i> generalization of Gini criterion for a common class of kernels where
+we prove a bias to density mode isolation and call it <i>Breiman's bias</i>.
+These theoretical findings suggest that a principled solution for the bias should directly address data
+density inhomogeneity. In particular, we show that <i>density equalization</i> can be implicitly achieved 
+using either locally adaptive weights or a general class of Riemannian (geodesic) kernels. 
+Our density equalization principle unifies many popular kernel clustering criteria including <i>normalized cut</i>,
+which we show has a bias to sparse subsets inversely related to <i>Breiman's bias</i>.
+Our synthetic and real data experiments illustrate these density biases and proposed solutions.
+We anticipate that theoretical understanding of kernel clustering limitations and their principled solutions
+will be important for a broad spectrum of data analysis applications across the disciplines. </p></td>
+        </tr></table>
+        <p><a href="http://goo.gl/18Hw34">Conference paper</a></p>
+
         <h3>Normalized Cut meets MRF</h3>
         <p class="pub-authors">M. Tang, D. Marin, I.B. Ayed, Y. Boykov</p>
         <p> <span class="pub-at">European Conference on Computer Vision (ECCV).</span> <span class="pub-where">Amsterdam, Netherlands, October 2016.</span>

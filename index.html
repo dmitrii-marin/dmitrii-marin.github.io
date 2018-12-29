@@ -35,37 +35,50 @@
         </p>
       </div>
     </div>
-    
+
     <div class="container">
         <h2>About</h2>
         <p>I am a PhD candidate at the Department of Computer Science, University of Western Ontario. dmarin3 at uwo dot ca. My supervisor is <a href="http://www.csd.uwo.ca/~yuri/"> Yuri Boykov</a>.</p>
         <p>My research is focused on designing general unsupervised and semi-supervised methods for accurate image segmentation and object delineation. In particular, I am focused on segmentation/detection of thin objects of different nature, e.g. roads, blood vessels, or contrast edges. The problem is formulated as cost function minimization. The concrete choice of the function depends on the properties of objects of interest. Many useful formulations are NP-hard, therefore efficient approximate optimization algorithms for such functions are desired.</p>
 
-        <h2>CV</h2>  
-        <p><a href="cv.pdf">Curriculum Vitae</a></p>  
+        <h2>CV</h2>
+        <p><a href="cv.pdf">Curriculum Vitae</a></p>
 
         <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
 
         <h2>Publications</h2>
 
-        <h3>Kernel clustering: density biases and solutions.</h3>
-        <p class="pub-authors">D. Marin, M. Tang, I.B. Ayed, Y. Boykov</p>
-        <p> <span class="pub-at">IEEE Transactions on Pattern Analysis and Machine Intelligence.</span> <span class="pub-where">(accepted)</span>
+        <h3>Kernel cuts: Kernel and spectral clustering meet regularization.</h3>
+        <p class="pub-authors">M. Tang, D. Marin, I.B. Ayed, Y. Boykov</p>
+        <p> <span class="pub-at">International Journal of Computer Vision,</span>
+           <span class="pub-where">(2018): 1-35. doi: 10.1007/s11263-018-1115-1 </span>
 		</p>
         <table><tr>
-            <td><a href="eccv16ncmrf/Bound_optim_linear.png"><img src="tpami17density/density.jpg" alt="Linear auxiliary function <=> concave objective" class="pub-cover"></a></td>
+            <td><a href="ijcv2018/potts_nc.png"><img src="ijcv2018/potts_nc.png" alt="Normalized Clustering" class="pub-cover"></a></td>
+            <td><p class="pub-abstract"> <i>Abstract.</i> This work bridges the gap between two popular methodologies for data partitioning: kernel clustering and regularization-based segmentation. While addressing closely related practical problems, these general methodologies may seem very different based on how they are covered in the literature. The differences may show up in motivation, formulation, and optimization, e.g. spectral relaxation versus max-flow. We explain how regularization and kernel clustering can work together and why this is useful. Our joint energy combines standard regularization, e.g. MRF potentials, and kernel clustering criteria like normalized cut. Complementarity of such terms is demonstrated in many applications using our bound optimization Kernel Cut algorithm for the joint energy (code is publicly available). While detailing combinatorial move-making, our main focus are new linear kernel and spectral bounds for kernel clustering criteria allowing their integration with any regularization objectives with existing discrete or continuous solvers. </p></td>
+        </tr></table>
+        <p><a href="https://cs.uwaterloo.ca/~yboykov/Abstracts/ijcv16-KC-abs.shtml">Journal paper</a></p>
+
+        <h3>Kernel clustering: density biases and solutions.</h3>
+        <p class="pub-authors">D. Marin, M. Tang, I.B. Ayed, Y. Boykov</p>
+        <p> <span class="pub-at">IEEE Transactions on Pattern Analysis and Machine Intelligence,</span>
+           <span class="pub-where"> vol. 41, no. 1, pp. 136-147, 1 Jan. 2019.
+   doi: 10.1109/TPAMI.2017.2780166 </span>
+		</p>
+        <table><tr>
+            <td><a href="tpami17density/density.jpg"><img src="tpami17density/density.jpg" alt="Density bias" class="pub-cover"></a></td>
             <td><p class="pub-abstract"> <i>Abstract.</i> Clustering is widely used in data analysis where
 kernel methods are particularly popular due to their generality and discriminating power.
-However, kernel clustering has a practically significant bias to small dense clusters, <i>e.g.</i> empirically observed in (Shi&Malik,2000).  
-Its causes have never been analyzed and understood theoretically, 
-even though many attempts were made to improve the results. 
-We provide conditions and formally prove this bias in kernel clustering. 
+However, kernel clustering has a practically significant bias to small dense clusters, <i>e.g.</i> empirically observed in (Shi&Malik,2000).
+Its causes have never been analyzed and understood theoretically,
+even though many attempts were made to improve the results.
+We provide conditions and formally prove this bias in kernel clustering.
 Previously, Breiman (1996) proved a bias to histogram mode isolation in <i>discrete</i> Gini criterion for decision tree learning.
 We found that kernel clustering reduces to a <i>continuous</i> generalization of Gini criterion for a common class of kernels where
 we prove a bias to density mode isolation and call it <i>Breiman's bias</i>.
 These theoretical findings suggest that a principled solution for the bias should directly address data
-density inhomogeneity. In particular, we show that <i>density equalization</i> can be implicitly achieved 
-using either locally adaptive weights or a general class of Riemannian (geodesic) kernels. 
+density inhomogeneity. In particular, we show that <i>density equalization</i> can be implicitly achieved
+using either locally adaptive weights or a general class of Riemannian (geodesic) kernels.
 Our density equalization principle unifies many popular kernel clustering criteria including <i>normalized cut</i>,
 which we show has a bias to sparse subsets inversely related to <i>Breiman's bias</i>.
 Our synthetic and real data experiments illustrate these density biases and proposed solutions.
@@ -113,7 +126,7 @@ will be important for a broad spectrum of data analysis applications across the 
         <p><a href="http://arxiv.org/abs/1506.07439">Technical report (extended version)</a></p>
         <p></p>
 
-    
+
 
       <footer>
         <p>&copy; 2017 Dmitrii Marin, UWO</p>

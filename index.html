@@ -25,6 +25,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>	
   </head>
 
   <body>
@@ -48,103 +49,7 @@
 
         <h2>Publications</h2>
 
-        <h3>Kernel cuts: Kernel and spectral clustering meet regularization.</h3>
-        <p class="pub-authors">M. Tang, D. Marin, I.B. Ayed, Y. Boykov</p>
-        <p> <span class="pub-at">International Journal of Computer Vision,</span>
-           <span class="pub-where">(2018): 1-35. doi: 10.1007/s11263-018-1115-1 </span>
-		</p>
-        <table><tr>
-            <td><a href="ijcv2018/potts_nc.png"><img src="ijcv2018/potts_nc.png" alt="Normalized Clustering" class="pub-cover"></a></td>
-            <td><p class="pub-abstract"> <i>Abstract.</i> This work bridges the
-              gap between two popular methodologies for data partitioning:
-              kernel clustering and regularization-based segmentation.
-              While addressing closely related practical problems, these general
-              methodologies may seem very different based on how they are
-              covered in the literature. The differences may show up in
-              motivation, formulation, and optimization, <i>e.g.</i> spectral
-              relaxation versus max-flow. We explain how regularization and
-              kernel clustering can work together and why this is useful. Our
-              joint energy combines standard regularization, <i>e.g.</i> MRF potentials,
-              and kernel clustering criteria like normalized cut.
-              Complementarity of such terms is demonstrated in many applications
-              using our bound optimization Kernel Cut algorithm for the joint
-              energy (code is publicly available). While detailing combinatorial
-              move-making, our main focus are new linear kernel and spectral
-              bounds for kernel clustering criteria allowing their integration
-              with any regularization objectives with existing discrete or
-              continuous solvers. </p></td>
-        </tr></table>
-        <p><a href="https://cs.uwaterloo.ca/~yboykov/Abstracts/ijcv16-KC-abs.shtml">Journal paper</a></p>
-
-        <h3>Kernel clustering: density biases and solutions.</h3>
-        <p class="pub-authors">D. Marin, M. Tang, I.B. Ayed, Y. Boykov</p>
-        <p> <span class="pub-at">IEEE Transactions on Pattern Analysis and Machine Intelligence,</span>
-           <span class="pub-where"> vol. 41, no. 1, pp. 136-147, Jan. 2019 (first published Dec, 2017).
-   doi: 10.1109/TPAMI.2017.2780166 </span>
-		</p>
-        <table><tr>
-            <td><a href="tpami17density/density.jpg"><img src="tpami17density/density.jpg" alt="Density bias" class="pub-cover"></a></td>
-            <td><p class="pub-abstract"> <i>Abstract.</i> Clustering is widely used in data analysis where
-kernel methods are particularly popular due to their generality and discriminating power.
-However, kernel clustering has a practically significant bias to small dense clusters, <i>e.g.</i> empirically observed in (Shi&Malik,2000).
-Its causes have never been analyzed and understood theoretically,
-even though many attempts were made to improve the results.
-We provide conditions and formally prove this bias in kernel clustering.
-Previously, Breiman (1996) proved a bias to histogram mode isolation in <i>discrete</i> Gini criterion for decision tree learning.
-We found that kernel clustering reduces to a <i>continuous</i> generalization of Gini criterion for a common class of kernels where
-we prove a bias to density mode isolation and call it <i>Breiman's bias</i>.
-These theoretical findings suggest that a principled solution for the bias should directly address data
-density inhomogeneity. In particular, we show that <i>density equalization</i> can be implicitly achieved
-using either locally adaptive weights or a general class of Riemannian (geodesic) kernels.
-Our density equalization principle unifies many popular kernel clustering criteria including <i>normalized cut</i>,
-which we show has a bias to sparse subsets inversely related to <i>Breiman's bias</i>.
-Our synthetic and real data experiments illustrate these density biases and proposed solutions.
-We anticipate that theoretical understanding of kernel clustering limitations and their principled solutions
-will be important for a broad spectrum of data analysis applications across the disciplines. </p></td>
-        </tr></table>
-        <p><a href="https://goo.gl/3QpyoT">Journal paper</a></p>
-
-        <h3>Normalized Cut meets MRF</h3>
-        <p class="pub-authors">M. Tang, D. Marin, I.B. Ayed, Y. Boykov</p>
-        <p> <span class="pub-at">European Conference on Computer Vision (ECCV).</span> <span class="pub-where">Amsterdam, Netherlands, October 2016.</span>
-		Acceptance rate 1.8% (oral presentation)</p>
-        <table><tr>
-            <td><a href="eccv16ncmrf/Bound_optim_linear.png"><img src="eccv16ncmrf/Bound_optim_linear.png" alt="Linear auxiliary function <=> concave objective" class="pub-cover"></a></td>
-            <td><p class="pub-abstract"> <i>Abstract.</i> We propose a new segmentation or clustering model that combines Markov Random Field (MRF) and Normalized Cut (NC) objectives. Both NC and MRF models are widely used in machine learning and computer vision, but they were not combined before due to significant differences in the corresponding optimization, e.g. spectral relaxation and combinatorial max-flow techniques. On the one hand, we show that many common applications for multi-label MRF segmentation energies can benefit from a high-order NC term, e.g. enforcing balanced clustering of arbitrary high-dimensional image features combining color, texture, location, depth, motion, etc. On the other hand, standard NC applications benefit from an inclusion of common pairwise or higher-order MRF constraints, e.g. edge alignment, bin-consistency, label cost, etc. To address NC+MRF energy, we propose two efficient multi-label combinatorial optimization techniques, spectral cut and kernel cut, using new unary bounds for different NC formulations. </p></td>
-        </tr></table>
-        <p><a href="http://goo.gl/18Hw34">Conference paper</a></p>
-
-        <h3>Thin Structure Estimation with Curvature Regularization</h3>
-        <p class="pub-authors">D. Marin, Y. Zhong, M. Drangova, Y. Boykov</p>
-        <p> <span class="pub-at">International Conference on Computer Vision (ICCV).</span> <span class="pub-where">Santiago, Chili, December 2015.</span> Acceptance rate 19.6%</p>
-        <table><tr>
-            <td><a href="iccv15thin/cover.png"><img src="iccv15thin/cover2.png" alt="Blood vessels" class="pub-cover"></a></td>
-            <td><p class="pub-abstract"> <i>Abstract.</i> Many applications in vision require estimation of thin structures such as boundary edges, surfaces, roads, blood vessels, neurons, etc. Unlike most previous approaches, we simultaneously detect and delineate thin structures with sub-pixel localization and real-valued orientation estimation. This is an ill-posed problem that requires regularization. We propose an objective function combining detection likelihoods with a prior minimizing curvature of the center-lines or surfaces. Unlike simple block-coordinate descent, we develop a novel algorithm that is able to perform joint optimization of location and detection variables more effectively. Our lower bound optimization algorithm applies to quadratic or absolute curvature. The proposed early vision framework is sufficiently general and it can be used in many higher-level applications. We illustrate the advantage of our approach on a range of 2D and 3D examples. </p></td>
-        </tr></table>
-        <p><a href="http://goo.gl/wbiyvw">Conference paper</a></p>
-
-        <h3>Secrets of GrabCut and Kernel K-means</h3>
-        <p class="pub-authors">M. Tang, I. B. Ayed, D. Marin, Y. Boykov</p>
-        <p> <span class="pub-at">International Conference on Computer Vision (ICCV).</span> <span class="pub-where">Santiago, Chili, December 2015. </span>Acceptance rate 19.6%</p>
-        <table><tr>
-            <td>
-              <div style="position: relative">
-                <img src="iccv15kernel/ours.jpg" alt="Our result" class="pub-cover">
-                <div class="topleft" style="top:2ex;color:darkgreen;font-size:small;font-weight:bold;">OURS</div>
-              </div>
-              <div style="position: relative">
-                <img src="iccv15kernel/hist_16.jpg" alt="GrabCut result" class="pub-cover">
-                <div class="topleft" style="color:darkgreen;font-size:small;font-weight:bold;background:white">GrabCut</div>
-              </div>
-            </td>
-            <td><p class="pub-abstract"> <i>Abstract.</i> The log-likelihood energy term in popular model-fitting segmentation methods, e.g. Zhu&Yuille, Chan-Vese, GrabCut, is presented as a generalized "probabilistic K-means" energy for color space clustering. This interpretation reveals some limitations, e.g. over-fitting. We propose an alternative approach to color clustering using kernel K-means energy with well-known properties such as non-linear separation and scalability to higher-dimensional feature spaces. Our bound formulation for kernel K-means allows to combine general pair-wise feature clustering methods with image grid regularization using graph cuts, similarly to standard color model fitting techniques for segmentation. Unlike histogram or GMM fitting, our approach is closely related to average association and normalized cut. But, in contrast to previous pairwise clustering algorithms, our approach can incorporate any standard geometric regularization in the image domain. We analyze extreme cases for kernel bandwidth (e.g. Gini bias) and demonstrate effectiveness of KNN-based adaptive bandwidth strategies. Our kernel K-means approach to segmentation benefits from higher-dimensional features where standard model fitting fails. </p></td>
-        </tr></table>
-        <p><a href="http://goo.gl/KiOJe9">Conference paper</a></p>
-        <p><a href="http://arxiv.org/abs/1506.07439">Technical report (extended version)</a></p>
-        <p></p>
-
-
-
+        <div data-type="AwesomeTableView" data-viewID="-LcDVVEPMdDwHL1Ty-to"></div>
       <footer>
         <p>&copy; 2019 Dmitrii Marin, University of Waterloo</p>
       </footer>

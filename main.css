@@ -32,3 +32,16 @@ img.pub-cover {
 .mute {
     color: #848482;
 }
+
+.details-social-link {
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid;
+}
+
+.details-social-icon {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    margin-right: 0px;
+}
